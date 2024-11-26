@@ -19,8 +19,12 @@ def subtract_two_numbers(num1, num2):
 
 def divide_two_numbers(num1, num2):
     print("\n Performing --> Division\n")
-    result= num1 / num2
-    print(f"Results = {result}")
+    try:
+        result= num1 / num2
+    except ZeroDivisionError:
+        print("Cannot divide by zero")
+    else:
+        print(f"Results = {result}")
 
 def multiply_two_numbers(num1, num2):
     print("\n Performing --> Multiplication\n")
